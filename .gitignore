@@ -1,0 +1,18 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+
+# Temp / Backup
+*~
+*.bak
+*.tmp
+
+# 未使用の古いロゴ素材
+assets/Regotith_logomar2.png
+assets/Regotith_logomark1.png
