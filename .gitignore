@@ -16,3 +16,7 @@ Thumbs.db
 # 未使用の古いロゴ素材
 assets/Regotith_logomar2.png
 assets/Regotith_logomark1.png
+
+
+# Backup originals (local only)
+assets/_original/
