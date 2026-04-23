@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Study Base REGOLITH（スタディベース レゴリス）の特定商取引法に基づく表記です。">
   <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://studybase-regolith.com/commercial.html">
   <title>特定商取引法に基づく表記 | Study Base REGOLITH</title>
 
   <!-- OGP / SNS共有メタデータ -->
@@ -14,6 +15,8 @@
   <meta property="og:description" content="Study Base REGOLITH の特定商取引法に基づく表記">
   <meta property="og:url" content="https://studybase-regolith.com/commercial.html">
   <meta property="og:image" content="https://studybase-regolith.com/assets/ogp.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://studybase-regolith.com/assets/ogp.jpg">
@@ -88,6 +91,7 @@
             </tr>
             <tr>
               <th>施設所在地</th>
+              <!-- TODO: 〒453-0000 は仮。塾長に正確な郵便番号を確認の上更新 -->
               <td>〒453-0000<br>愛知県名古屋市中村区中村町8丁目10番地 パルメラM102号<br>名古屋市営地下鉄 東山線「中村公園駅」徒歩約2分</td>
             </tr>
             <tr>
@@ -176,6 +180,7 @@
       <div>
         <img src="assets/regolith-logo-header.png" alt="Study Base REGOLITH" class="footer-logo" style="height:36px; margin-bottom:16px; background:rgba(255,255,255,0.92); padding:6px 12px; border-radius:4px;">
         <address class="footer-address" style="font-style:normal;">
+          <!-- TODO: 〒453-0000 は仮。塾長に正確な郵便番号を確認の上更新 -->
           〒453-0000 愛知県名古屋市中村区<br>
           中村町8丁目10番地 パルメラM102号<br>
           名古屋市営地下鉄 東山線「中村公園駅」徒歩約2分<br>
@@ -201,6 +206,32 @@
     </div>
   </div>
 </footer>
+
+
+<!-- ========================================================
+  JavaScript（ハンバーガーメニュー）
+  ======================================================== -->
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const nav       = document.getElementById('headerNav');
+
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('open');
+  });
+  hamburger.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') nav.classList.toggle('open');
+  });
+
+  // Header scroll shadow
+  window.addEventListener('scroll', () => {
+    const header = document.getElementById('header');
+    if (window.scrollY > 40) {
+      header.style.boxShadow = '0 2px 24px rgba(31,34,51,0.10)';
+    } else {
+      header.style.boxShadow = 'none';
+    }
+  });
+</script>
 
 </body>
 </html>
