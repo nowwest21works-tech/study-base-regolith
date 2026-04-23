@@ -1501,8 +1501,12 @@ ul, ol { list-style: none; }
 /* ========================================================
    LEGAL PAGES（プライバシーポリシー・利用規約・特商法）
    ======================================================== */
+html {
+  scroll-padding-top: 88px; /* fixed header（72px）+ 余白16px */
+}
+
 .legal-page {
-  padding: 140px 0 96px;
+  padding: 180px 0 120px; /* 固定ヘッダー分+余裕のあるクリアランス */
   background-color: var(--bg-base);
 }
 
@@ -1512,64 +1516,67 @@ ul, ol { list-style: none; }
 
 .legal-header {
   text-align: center;
-  margin-bottom: 64px;
+  margin-bottom: 96px; /* タイトルから第1条まで余白たっぷり */
 }
 
 .legal-label {
   font-family: var(--font-serif-en);
   font-size: 0.95rem;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.24em;
   color: var(--accent-orange);
   display: block;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
 }
 
 .legal-title {
   font-family: var(--font-serif-jp);
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 600;
   color: var(--text-main);
-  margin: 0 0 16px;
-  letter-spacing: 0.04em;
+  margin: 0 0 28px;
+  letter-spacing: 0.06em;
+  line-height: 1.4;
 }
 
 .legal-lead {
   font-size: 0.95rem;
   color: var(--text-sub);
-  line-height: 1.9;
+  line-height: 2.0;
   max-width: 720px;
   margin: 0 auto;
 }
 
 .legal-section {
-  margin-bottom: 48px;
-  padding-bottom: 32px;
-  border-bottom: 1px solid rgba(31, 34, 51, 0.08);
+  margin-bottom: 72px; /* セクション間の呼吸 */
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(31, 34, 51, 0.1);
 }
 
 .legal-section:last-of-type {
   border-bottom: none;
+  margin-bottom: 48px;
 }
 
 .legal-heading {
   font-family: var(--font-serif-jp);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: var(--text-main);
-  margin: 0 0 20px;
-  padding-left: 14px;
-  border-left: 3px solid var(--accent-orange);
-  letter-spacing: 0.04em;
+  margin: 0 0 32px; /* 条項タイトル→本文の呼吸 */
+  padding-left: 18px;
+  border-left: 4px solid var(--accent-orange);
+  letter-spacing: 0.05em;
+  line-height: 1.5;
 }
 
 .legal-body {
   font-size: 0.95rem;
-  line-height: 1.95;
+  line-height: 2.05; /* 読みやすい行間 */
   color: var(--text-main);
 }
 
 .legal-body p {
-  margin: 0 0 16px;
+  margin: 0 0 22px;
 }
 
 .legal-body p:last-child {
@@ -1578,14 +1585,27 @@ ul, ol { list-style: none; }
 
 .legal-body ol,
 .legal-body ul {
-  margin: 0 0 16px;
-  padding-left: 24px;
+  margin: 0 0 22px;
+  padding-left: 28px;
 }
 
-.legal-body ol li,
-.legal-body ul li {
+.legal-body ol > li,
+.legal-body ul > li {
+  margin-bottom: 14px; /* 箇条書きの行間広め */
+  line-height: 1.95;
+  padding-left: 4px;
+}
+
+.legal-body ol ul,
+.legal-body ul ul,
+.legal-body ol ol {
+  margin: 12px 0 8px;
+}
+
+.legal-body ol ul > li,
+.legal-body ul ul > li,
+.legal-body ol ol > li {
   margin-bottom: 8px;
-  line-height: 1.9;
 }
 
 .legal-body strong {
@@ -1606,17 +1626,17 @@ ul, ol { list-style: none; }
 .legal-table {
   width: 100%;
   border-collapse: collapse;
-  margin: 16px 0 24px;
+  margin: 20px 0 28px;
   font-size: 0.95rem;
 }
 
 .legal-table th,
 .legal-table td {
-  padding: 14px 18px;
+  padding: 18px 20px;
   text-align: left;
   vertical-align: top;
   border-bottom: 1px solid rgba(31, 34, 51, 0.08);
-  line-height: 1.8;
+  line-height: 1.9;
 }
 
 .legal-table th {
@@ -1632,8 +1652,8 @@ ul, ol { list-style: none; }
 }
 
 .legal-meta {
-  margin-top: 56px;
-  padding-top: 24px;
+  margin-top: 72px;
+  padding-top: 28px;
   border-top: 1px solid rgba(31, 34, 51, 0.12);
   text-align: right;
   font-size: 0.88rem;
@@ -1645,8 +1665,8 @@ ul, ol { list-style: none; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin-top: 56px;
-  padding: 12px 28px;
+  margin-top: 72px;
+  padding: 14px 32px;
   border: 1.5px solid var(--accent-orange);
   border-radius: 4px;
   color: var(--accent-orange);
@@ -1661,12 +1681,15 @@ ul, ol { list-style: none; }
 }
 
 @media (max-width: 768px) {
-  .legal-page { padding: 110px 0 72px; }
-  .legal-title { font-size: 1.6rem; }
-  .legal-heading { font-size: 1.08rem; }
-  .legal-body { font-size: 0.92rem; }
+  .legal-page { padding: 140px 0 88px; }
+  .legal-header { margin-bottom: 64px; }
+  .legal-title { font-size: 1.8rem; }
+  .legal-heading { font-size: 1.12rem; margin-bottom: 24px; }
+  .legal-body { font-size: 0.92rem; line-height: 1.95; }
+  .legal-body p { margin-bottom: 18px; }
+  .legal-section { margin-bottom: 56px; padding-bottom: 36px; }
   .legal-table th,
-  .legal-table td { padding: 12px 14px; font-size: 0.9rem; }
+  .legal-table td { padding: 14px 16px; font-size: 0.9rem; }
   .legal-table th { width: 38%; white-space: normal; }
 }
 
