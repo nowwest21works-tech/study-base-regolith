@@ -194,6 +194,8 @@ ul, ol { list-style: none; }
 .header-cta {
   padding: 10px 24px !important;
   font-size: 0.82rem !important;
+  color: var(--white) !important;
+  font-weight: 700 !important;
 }
 
 .hamburger {
@@ -927,19 +929,29 @@ ul, ol { list-style: none; }
 .price-strike-value {
   position: relative;
   display: inline-block;
-  text-decoration: line-through;
-  text-decoration-color: var(--accent-deep);
-  text-decoration-thickness: 2px;
   color: var(--text-light);
+}
+.price-strike-value::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  background: var(--accent-deep);
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 .price-strike-num {
   font-family: var(--font-serif-en);
   font-size: 1.6rem;
   font-weight: 600;
+  text-decoration: none;
 }
 .price-strike-unit {
   font-size: 0.75rem;
   margin-left: 2px;
+  text-decoration: none;
 }
 .price-strike-tax {
   font-size: 0.68rem;
