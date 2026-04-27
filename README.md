@@ -1,6 +1,6 @@
-# Study Base REGOLITH
+# Study Base Regolith
 
-名古屋市中村区・中村公園駅徒歩圏内に開業する、会員制自習ラウンジ「Study Base REGOLITH」の公式ランディングページ。
+名古屋市中村区・中村公園駅徒歩圏内に開業する、会員制自習ラウンジ「Study Base Regolith」の公式ランディングページ。
 
 ## 構成
 
