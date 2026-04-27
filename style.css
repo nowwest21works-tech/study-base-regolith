@@ -929,6 +929,7 @@ ul, ol { list-style: none; }
 .price-strike-value {
   position: relative;
   display: inline-block;
+  width: fit-content;
   color: var(--text-light);
 }
 .price-strike-value::after {
