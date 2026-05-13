@@ -1161,6 +1161,23 @@ ul, ol { list-style: none; }
   font-weight: 600;
   margin-right: 4px;
 }
+.price-juku-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.price-juku-btn {
+  align-self: flex-start;
+  font-size: 0.82rem;
+  padding: 10px 22px;
+}
+@media (max-width: 640px) {
+  .price-juku-btn {
+    align-self: stretch;
+    text-align: center;
+  }
+}
 
 /* ---- 体験利用（ドロップイン）ブロック ---- */
 .price-trial-block {
