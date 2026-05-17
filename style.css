@@ -1522,6 +1522,7 @@ ul, ol { list-style: none; }
 .option-card-img {
   display: block;
   width: calc(100% + 64px);
+  max-width: none;
   margin: -36px -32px 24px -32px;
   height: 220px;
   object-fit: cover;
