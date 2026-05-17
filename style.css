@@ -229,7 +229,7 @@ ul, ol { list-style: none; }
   background:
     linear-gradient(90deg, rgba(245,239,228,0.80) 0%, rgba(245,239,228,0.62) 50%, rgba(245,239,228,0.42) 100%),
     radial-gradient(ellipse at 60% 50%, rgba(232,199,102,0.18) 0%, transparent 60%),
-    url("assets/hero-bg-v2.jpg") center/cover no-repeat;
+    url("assets/hero-bg.png") center/cover no-repeat;
 }
 
 .hero-bg {
@@ -1520,16 +1520,13 @@ ul, ol { list-style: none; }
   overflow: hidden;
 }
 .option-card-img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 130px;
-  height: 130px;
+  display: block;
+  width: calc(100% + 64px);
+  margin: -36px -32px 24px -32px;
+  height: 220px;
   object-fit: cover;
-  border-radius: 0 var(--radius-lg) 0 20px;
-}
-.option-card-head {
-  padding-right: 120px;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  flex-shrink: 0;
 }
 .option-card:hover {
   transform: translateY(-3px);
