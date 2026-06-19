@@ -1752,14 +1752,13 @@ ul, ol { list-style: none; }
 /* ---------- Voice cards ---------- */
 .voice-grid {
   margin-top: 48px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
   gap: 24px;
 }
 .voice-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  display: contents;
 }
 .voice-card {
   background: var(--white);
@@ -1813,6 +1812,7 @@ ul, ol { list-style: none; }
   font-size: 0.88rem;
   line-height: 1.9;
   color: var(--text-sub);
+  margin: auto 0;
 }
 .voice-text strong {
   font-weight: 700;
@@ -1932,6 +1932,11 @@ ul, ol { list-style: none; }
 
 /* ---------- Voice & Ranking : responsive ---------- */
 @media (max-width: 768px) {
+  .voice-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
   .voice-row {
     display: flex;
     overflow-x: auto;
